@@ -1,12 +1,12 @@
-package Day3
+package Day4
 
-fun main(){
-    var price=200
-    var msg=when(price){
-        in 0..50->"A solid pick-me-up without hurting your wallet. Good choice!"
-        in 50..150->"You’ve got taste — not too fancy, not too plain. Just right!"
-        in 150.. Int.MAX_VALUE->"Ooh, going premium today? Someone's treating themselves!"
-        else->"Coffee at this  price is not available"
+fun main() {
+    val menu = CoffeeMenu(listOf("Espresso", "Latte", "Cappuccino", "Mocha","Americano"))
+    menu.printItems()
+}
+data class CoffeeMenu(val items: List<String>) {
+    fun printItems() {
+        println("All items are")
+        println(items)
     }
-    println("price= $price,$msg")
 }
