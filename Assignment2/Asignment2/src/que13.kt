@@ -1,9 +1,11 @@
-package Day3
+package Day4
 
-fun main(){
-    println("This is the discount table")
-    for (discount in 10..50 step 10){
-        println(" Get your coffee at $discount% off ")
 
-    }
+fun main() {
+    val coffeeOrders = setOf("Latte", "Espresso", "Cappuccino", "Latte", "Mocha","Americano","Mocha","Espresso")
+    Orders(coffeeOrders)
+}
+fun Orders(orders: Set<String>) {
+    val Count = orders.size
+    println("Number of unique coffee orders: $Count")
 }
